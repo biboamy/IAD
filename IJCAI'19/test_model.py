@@ -62,8 +62,7 @@ def test_audio(stft):
     reconst = griffin_lim(stft,2048,512,1000)
     librosa.output.write_wav('../output_data/audio/test.wav', reconst, 16000)
 
-# UnetAE_preRoll
-# UnetAE_preIP_preRoll 
+# UnetAE_preIP_preRoll -> UnetED    
 # UnetAE_preIP_prePP_prePNZ_preRoll 
 # UnetAE_preIP_prePP_prePNN_preRoll 
 # DuoAE_preIP_prePP
@@ -71,10 +70,7 @@ def test_audio(stft):
 # DuoAE_preIP_prePP_preRoll
 # DuoAE_preIP_preINZ_prePP_prePNZ_preRoll
 # DuoAE_preIP_preINN_prePP_prePNN_preRoll
-# twoStep
-# MTAN 
 
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 name = 'UnetAE_preIP_prePP_prePNZ_preRoll'
 for i in range(0,2):
     model = Net(name).cuda()
