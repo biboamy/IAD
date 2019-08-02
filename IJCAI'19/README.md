@@ -12,4 +12,4 @@ Yun-Ning Hung, I-Tung Chiang, Yi-An Chen and Yi-Hsuan Yang, "[Musical Compositio
 ```
 python3 prediction.py ocean.mp3 UnetED
 ```
-3. Instrument prediction result will be stored in the **output_data** folder 
+3. Instrument prediction result and embedding will be stored in the **output_data** folder 

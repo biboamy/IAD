@@ -108,6 +108,7 @@ def main(argv):
     encoder.eval() 
     data = Variable(Xte)
     data = encoder(data,Xavg, Xstd, model_name)
+    np.save('output_data/embed/'+audio_name[:-4]+'.npy',data.data.cpu().numpy())
 
     pred = classifier(data)
     pred_inst = torch.sigmoid(pred).data.cpu().numpy()
